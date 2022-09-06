@@ -1,0 +1,152 @@
+class test2
+{
+    field static int a
+    field static int b
+    field static int i
+    field static int k
+    method public static int add(int, int)
+    max_stack 15
+    max_locals 15
+    {
+        iload 0
+        iload 1
+        iadd
+        istore 2
+        sipush 88
+        istore 0
+        sipush 99
+        istore 1
+        iload 2
+        ireturn
+    }
+    method public static int add2(int, int)
+    max_stack 15
+    max_locals 15
+    {
+        iload 0
+        iload 1
+        invokestatic int test2.add(int, int)
+        ireturn
+    }
+    method public static void main(java.lang.String[])
+    max_stack 15
+    max_locals 15
+    {
+        getstatic java.io.PrintStream java.lang.System.out
+        sipush 10
+        sipush 10
+        invokestatic int test2.add2(int, int)
+        invokevirtual void java.io.PrintStream.println(int)
+        sipush 0
+        putstatic int test2.k
+        sipush 5
+        putstatic int test2.i
+        sipush 25
+        sipush 100
+        sipush 5
+        getstatic int test2.i
+        imul
+        imul
+        imul
+        getstatic int test2.k
+        invokestatic int test2.add(int, int)
+        putstatic int test2.k
+        getstatic java.io.PrintStream java.lang.System.out
+        getstatic int test2.k
+        invokevirtual void java.io.PrintStream.println(int)
+        getstatic java.io.PrintStream java.lang.System.out
+        getstatic int test2.i
+        invokevirtual void java.io.PrintStream.println(int)
+        sipush 8
+        putstatic int test2.a
+        sipush 7
+        putstatic int test2.b
+        getstatic int test2.a
+        getstatic int test2.b
+        getstatic int test2.a
+        getstatic int test2.b
+        isub
+        iflt L0
+        iconst_0
+        goto L1
+L0:
+        iconst_1
+L1:
+        ior
+        isub
+        iflt L2
+        iconst_0
+        goto L3
+L2:
+        iconst_1
+L3:
+        ifeq L4
+        getstatic int test2.a
+        getstatic int test2.b
+        imul
+        putstatic int test2.a
+        goto L5
+L4:
+        getstatic int test2.a
+        getstatic int test2.b
+        iadd
+        putstatic int test2.a
+L5:
+        getstatic java.io.PrintStream java.lang.System.out
+        getstatic int test2.a
+        invokevirtual void java.io.PrintStream.println(int)
+        getstatic java.io.PrintStream java.lang.System.out
+        getstatic int test2.b
+        invokevirtual void java.io.PrintStream.println(int)
+        sipush 5
+        putstatic int test2.a
+        sipush 5
+        putstatic int test2.b
+        getstatic int test2.a
+        getstatic int test2.b
+        isub
+        ifne L6
+        iconst_0
+        goto L7
+L6:
+        iconst_1
+L7:
+        ifeq L8
+        getstatic int test2.a
+        getstatic int test2.b
+        imul
+        putstatic int test2.a
+        goto L9
+L8:
+        getstatic int test2.a
+        getstatic int test2.b
+        iadd
+        putstatic int test2.a
+L9:
+        getstatic java.io.PrintStream java.lang.System.out
+        getstatic int test2.a
+        invokevirtual void java.io.PrintStream.println(int)
+        getstatic java.io.PrintStream java.lang.System.out
+        getstatic int test2.b
+        invokevirtual void java.io.PrintStream.println(int)
+        getstatic int test2.a
+        getstatic int test2.b
+        isub
+        ifeq L10
+        iconst_0
+        goto L11
+L10:
+        iconst_1
+L11:
+        iconst_1
+        ixor
+        iconst_1
+        ixor
+        ifeq L12
+        getstatic java.io.PrintStream java.lang.System.out
+        ldc "Hello Hello"
+        invokevirtual void java.io.PrintStream.println(java.lang.String)
+L12:
+        return
+    }
+}
